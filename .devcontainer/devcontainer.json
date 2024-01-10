@@ -17,9 +17,9 @@
 		"vscode": {
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
-				"ms-python.black-formatter",
 				"mtxr.sqltools",
-				"mtxr.sqltools-driver-pg"
+				"mtxr.sqltools-driver-pg",
+				"ms-vscode.vscode-node-azure-pack"
 			],
 			"settings": {
 				"sqltools.connections": [
@@ -29,8 +29,8 @@
 						"server": "localhost",
 						"port": 5432,
 						"database": "postgres",
-						"username": "admin",
-						"password": "LocalPasswordOnly"
+						"username": "postgres",
+						"password": "postgres"
 					}
 				],
 				"files.exclude": {
