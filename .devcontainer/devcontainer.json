@@ -17,6 +17,8 @@
 		"vscode": {
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
+				"GitHub.copilot",
+				"GitHub.copilot-chat",
 				"mtxr.sqltools",
 				"mtxr.sqltools-driver-pg",
 				"ms-vscode.vscode-node-azure-pack"
@@ -32,11 +34,7 @@
 						"username": "postgres",
 						"password": "postgres"
 					}
-				],
-				"files.exclude": {
-					".ruff_cache": true,
-					".pytest_cache": true
-				}
+				]
 			}
 		}
 	},
