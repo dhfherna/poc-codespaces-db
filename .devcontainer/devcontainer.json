@@ -1,0 +1,44 @@
+{
+	"name": "poc-codespaces-db",
+	"dockerComposeFile": "docker-compose.yaml",
+	"service": "app",
+	"workspaceFolder": "/workspace",
+	"forwardPorts": [5432],
+	"portsAttributes": {
+		"5432": {"label": "PostgreSQL port", "onAutoForward": "silent"}
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/sshd:1": {
+			"version": "latest"
+		}
+	},
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"ms-python.black-formatter",
+				"mtxr.sqltools",
+				"mtxr.sqltools-driver-pg"
+			],
+			"settings": {
+				"sqltools.connections": [
+					{
+						"name": "Local database",
+						"driver": "PostgreSQL",
+						"server": "localhost",
+						"port": 5432,
+						"database": "postgres",
+						"username": "admin",
+						"password": "LocalPasswordOnly"
+					}
+				],
+				"files.exclude": {
+					".ruff_cache": true,
+					".pytest_cache": true
+				}
+			}
+		}
+	},
+	"remoteUser": "vscode"
+}
